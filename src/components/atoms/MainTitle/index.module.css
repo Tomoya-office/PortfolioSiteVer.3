@@ -1,0 +1,6 @@
+.Headline {
+  font-size: 72px;
+  -webkit-text-stroke: 8px #507C99;
+  paint-order: stroke fill;
+  color: #FFF;
+}
