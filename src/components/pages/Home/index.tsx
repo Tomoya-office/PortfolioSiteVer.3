@@ -1,11 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./index.module.css";
 import clsx from "clsx";
-import {
-  Noto_Sans_JP,
-  Dangrek,
-  Mochiy_Pop_One,
-} from "next/font/google";
+import { Noto_Sans_JP, Dangrek, Mochiy_Pop_One } from "next/font/google";
 
 import SkillList from "../../organisms/SkillList";
 import skills from "@/src/data/SkillsData";
@@ -15,6 +13,7 @@ import PortfolioPhotosList from "../../atoms/PortfolioPhotos";
 import PortfolioPhotos1 from "@/src/data/PortfolioPhotos1";
 import PortfolioPhotos2 from "@/src/data/PortfolioPhotos2";
 import HeadLine from "../../organisms/HeadLine";
+import ProfileBook from "../../organisms/ProfileBook";
 
 const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
@@ -27,6 +26,7 @@ const dangrek = Dangrek({
 });
 
 export default function Home() {
+
   return (
     <div className={styles.page}>
       <header className={styles.Header}>
@@ -70,8 +70,8 @@ export default function Home() {
       </header>
 
       <main className={styles.main}>
-        <section className={styles.AllSkils}>
-          <HeadLine main='全てのスキル' sub='All Skills' />
+        <section className={styles.SkilsSection}>
+          <HeadLine main="全てのスキル" sub="All Skills" />
           <div className={styles.SkillsExplanation}>
             {skills.map((skill) => (
               <SkillList key={skill.id} skill={skill} />
@@ -79,7 +79,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section></section>
+        <section className={styles.ProfileSection}>
+          <HeadLine main="私についてもっと" sub="Profile" />
+          <ProfileBook />
+        </section>
 
         <footer></footer>
       </main>

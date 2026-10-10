@@ -227,7 +227,7 @@ a.secondary {
 }
 
 /* 自分のスキルについて */
-.AllSkils {
+.SkilsSection {
   width: auto;
   max-width: 1440px;
   margin: 0 auto;
@@ -241,4 +241,10 @@ a.secondary {
   flex-wrap: wrap;
   justify-content: center;
   gap: 50px;
+}
+
+.ProfileSection {
+  width: auto;
+  max-width: 1440px;
+  margin: 0 auto;
 }
