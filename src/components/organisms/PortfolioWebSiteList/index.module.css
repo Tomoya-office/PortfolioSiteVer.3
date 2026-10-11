@@ -1,0 +1,32 @@
+
+/* これまでの作品 */
+.WebPortfolioPosition {
+  display: grid;
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 24px;
+  box-sizing: border-box;
+
+  /* PC：3列 */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 100px 40px;
+}
+
+/* タブレット：2列 */
+@media (max-width: 768px) {
+  .WebPortfolioPosition {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 48px 24px;
+    padding-inline: 20px;
+  }
+}
+
+/* スマホ：1列 */
+@media (max-width: 480px) {
+  .WebPortfolioPosition {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-inline: 16px;
+  }
+}

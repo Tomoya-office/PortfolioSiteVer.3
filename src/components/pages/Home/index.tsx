@@ -5,15 +5,22 @@ import styles from "./index.module.css";
 import clsx from "clsx";
 import { Noto_Sans_JP, Dangrek, Mochiy_Pop_One } from "next/font/google";
 
-import SkillList from "../../organisms/SkillList";
-import skills from "@/src/data/SkillsData";
-// import type { Skill } from "@/src/data/SkillsData";
-
+// ヘッダー ポートフォリオの切り抜き写真
 import PortfolioPhotosList from "../../atoms/PortfolioPhotos";
+// タイトル
+import HeadLine from "../../organisms/HeadLine";
+// 自分のスキル
+import SkillList from "../../organisms/SkillList";
+// プロフィール本
+import ProfileBook from "../../organisms/ProfileBook";
+// WEBサイトのポートフォリオ
+import PortfolioWebSiteList from "../../organisms/PortfolioWebSiteList";
+
+// データ
 import PortfolioPhotos1 from "@/src/data/PortfolioPhotos1";
 import PortfolioPhotos2 from "@/src/data/PortfolioPhotos2";
-import HeadLine from "../../organisms/HeadLine";
-import ProfileBook from "../../organisms/ProfileBook";
+import skills from "@/src/data/SkillsData";
+import PortfolioWebSite from "@/src/data/PortfolioWebSite";
 
 const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
@@ -26,7 +33,6 @@ const dangrek = Dangrek({
 });
 
 export default function Home() {
-
   return (
     <div className={styles.page}>
       <header className={styles.Header}>
@@ -82,6 +88,11 @@ export default function Home() {
         <section className={styles.ProfileSection}>
           <HeadLine main="私についてもっと" sub="Profile" />
           <ProfileBook />
+        </section>
+
+        <section className={styles.WebPortfolioSection}>
+          <HeadLine main="これまでの作品" sub="MyWorks" />
+          <PortfolioWebSiteList websites={PortfolioWebSite} />
         </section>
 
         <footer></footer>
