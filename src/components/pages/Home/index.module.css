@@ -230,7 +230,7 @@ a.secondary {
 .SkilsSection {
   width: auto;
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 100px auto 0;
 }
 
 /* 全部のスキルを加工DIV */
@@ -246,11 +246,17 @@ a.secondary {
 .ProfileSection {
   width: auto;
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 100px auto 0;
 }
 
 .WebPortfolioSection {
   width: auto;
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 100px auto 0;
+}
+
+.ClientWorkSection {
+  width: auto;
+  max-width: 1440px;
+  margin: 100px auto 0;
 }

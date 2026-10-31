@@ -70,7 +70,7 @@ export default function ProfileBook() {
           onClick={openBook}
         >
           <span className={styles.BookSolid}></span>
-          <h4 className={styles.BookTitle}>井草朋也</h4>
+          <h3 className={styles.BookTitle}>井草朋也</h3>
         </div>
 
         {/* 中身 */}

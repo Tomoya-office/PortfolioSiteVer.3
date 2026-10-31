@@ -4,6 +4,8 @@ import Image from "next/image";
 import styles from "./index.module.css";
 import clsx from "clsx";
 import { Noto_Sans_JP, Dangrek, Mochiy_Pop_One } from "next/font/google";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 // ヘッダー ポートフォリオの切り抜き写真
 import PortfolioPhotosList from "../../atoms/PortfolioPhotos";
@@ -14,13 +16,18 @@ import SkillList from "../../organisms/SkillList";
 // プロフィール本
 import ProfileBook from "../../organisms/ProfileBook";
 // WEBサイトのポートフォリオ
-import PortfolioWebSiteList from "../../organisms/PortfolioWebSiteList";
+import PortfolioList from "../../organisms/PortfolioList";
 
 // データ
 import PortfolioPhotos1 from "@/src/data/PortfolioPhotos1";
 import PortfolioPhotos2 from "@/src/data/PortfolioPhotos2";
 import skills from "@/src/data/SkillsData";
+
 import PortfolioWebSite from "@/src/data/PortfolioWebSite";
+import ClientWorkListData from "@/src/data/ClientWorkListData";
+import ClientWorks, { type ClientWork } from "@/src/data/ClientWorks";
+
+import Modal from "../../pages/Modal";
 
 const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
@@ -33,6 +40,8 @@ const dangrek = Dangrek({
 });
 
 export default function Home() {
+  const router = useRouter();
+  const [selectedWork, setSelectedWork] = useState<ClientWork | null>(null);
   return (
     <div className={styles.page}>
       <header className={styles.Header}>
@@ -92,7 +101,30 @@ export default function Home() {
 
         <section className={styles.WebPortfolioSection}>
           <HeadLine main="これまでの作品" sub="MyWorks" />
-          <PortfolioWebSiteList websites={PortfolioWebSite} />
+          <PortfolioList
+            websites={PortfolioWebSite}
+            onItemClick={(website) => {
+              router.push(`/works/${website.id}`);
+            }}
+          />
+        </section>
+
+        <section className={styles.ClientWorkSection}>
+          <HeadLine main="派遣先での業務" sub="Client" />
+
+          <PortfolioList
+            websites={ClientWorkListData}
+            onItemClick={(website) => {
+              const work = ClientWorks.find((item) => item.id === website.id);
+              if (work) {
+                setSelectedWork(work);
+              }
+            }}
+          />
+
+          {selectedWork && (
+            <Modal work={selectedWork} onClose={() => setSelectedWork(null)} />
+          )}
         </section>
 
         <footer></footer>

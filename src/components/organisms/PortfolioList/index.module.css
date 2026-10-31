@@ -2,15 +2,14 @@
 /* これまでの作品 */
 .WebPortfolioPosition {
   display: grid;
-  width: 100%;
+  width: fit-content;
   max-width: 1440px;
   margin-inline: auto;
   padding-inline: 24px;
   box-sizing: border-box;
-
   /* PC：3列 */
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 100px 40px;
+  gap: 100px 200px;
 }
 
 /* タブレット：2列 */

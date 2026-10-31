@@ -1,8 +1,10 @@
 .HeadlineEN {
-  font-size: 32px;
-  position: absolute;
+  /* position: absolute;
   top: -30px;
-  left: -30px;
+  left: -30px; */
+  height: fit-content;
+  width: fit-content;
+  font-size: 32px;
   letter-spacing: 5%;
   transform: rotate(-15deg);
   color: #FFF;

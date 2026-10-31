@@ -3,15 +3,15 @@ import Subtitle from "../../atoms/SubTitle";
 import Maintitle from "../../atoms/MainTitle";
 
 type HeadLineProps = {
-  main: string;
   sub: string;
+  main: string;
 };
 
-export default function HeadLine({ main, sub }: HeadLineProps) {
+export default function HeadLine({ sub,main }: HeadLineProps) {
   return (
     <div className={styles.HeadlinePosition}>
-      <Maintitle main={main} />
       <Subtitle sub={sub} />
+      <Maintitle main={main} />
     </div>
   );
 }
