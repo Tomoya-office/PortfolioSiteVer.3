@@ -16,7 +16,7 @@ type PortfolioProps = {
 export default function PortfolioItem({ website, onClick }: PortfolioProps) {
   return (
     <button
-      className={styles.PortfolioItem}
+      className={styles.PhotoButton}
       onClick={onClick}
       aria-label={website.alt}
     >
