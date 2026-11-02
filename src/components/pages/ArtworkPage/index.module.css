@@ -2,12 +2,13 @@
   position: relative;
   height: 100vh;
   width: 100vw;
-  max-width: 1400px;
+  max-width: 1440px;
   margin: 0 auto;
   background-color: #f3f3f3;
 }
 
 .HeaderPhoto {
+  margin: 130px auto 0;
   object-fit: cover;
   border-radius: 30px;
 }

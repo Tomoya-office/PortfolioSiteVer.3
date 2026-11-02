@@ -28,6 +28,17 @@ import ClientWorkListData from "@/src/data/ClientWorkListData";
 import ClientWorks, { type ClientWork } from "@/src/data/ClientWorks";
 
 import Modal from "../Modal";
+import NavMenu , { type NavMenuData } from "../../organisms/NavMenu";
+
+const NavMenuData: NavMenuData[] = [
+  { label: "Top", href: "#top" },
+  { label: "All Skills", href: "#Skills" },
+  { label: "Profile", href: "#Profile" },
+  { label: "My Works", href: "#MyWorks" },
+  { label: "Client", href: "#Client" },
+  { label: "Illustration", href: "#Illustration" },
+  { label: "Contact", href: "#Contact" },
+];
 
 const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
@@ -45,18 +56,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <header className={styles.Header}>
-        <nav className={styles.Navigation}>
-          <ul className={styles.UnorderedList}>
-            <li>Top</li>
-            <li>All Skills</li>
-            <li>Profile</li>
-            <li>My Works</li>
-            <li>Client</li>
-            <li>Illustration</li>
-            <li>Contact</li>
-          </ul>
-        </nav>
-
+        <NavMenu menus={NavMenuData} />
         <div className={styles.AllScrollPhotos}>
           <div className={clsx(styles.ScrollPhotos, styles.FirstPhotos)}>
             {PortfolioPhotos1.map((photo) => (
@@ -85,7 +85,7 @@ export default function Home() {
       </header>
 
       <main className={styles.main}>
-        <section className={styles.SkilsSection}>
+        <section id="Skills" className={styles.SkilsSection}>
           <HeadLine main="全てのスキル" sub="All Skills" />
           <div className={styles.SkillsExplanation}>
             {skills.map((skill) => (
@@ -94,12 +94,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.ProfileSection}>
+        <section id="Profile" className={styles.ProfileSection}>
           <HeadLine main="私についてもっと" sub="Profile" />
           <ProfileBook />
         </section>
 
-        <section className={styles.WebPortfolioSection}>
+        <section id="MyWorks" className={styles.WebPortfolioSection}>
           <HeadLine main="これまでの作品" sub="MyWorks" />
           <PortfolioList
             websites={PortfolioWebSite}
@@ -109,7 +109,7 @@ export default function Home() {
           />
         </section>
 
-        <section className={styles.ClientWorkSection}>
+        <section id="Client" className={styles.ClientWorkSection}>
           <HeadLine main="派遣先での業務" sub="Client" />
 
           <PortfolioList

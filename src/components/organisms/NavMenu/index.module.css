@@ -1,0 +1,23 @@
+.Navigation {
+  position: fixed;
+  display: flex;
+  right: 0;
+  align-items: center;
+  padding: 25px 30px;
+  border-radius: 0 0 0 30px;
+  background-color: #EFEFEFee;
+
+  box-sizing: border-box;
+  border: solid 1px #333;
+  z-index: 999;
+}
+
+.UnorderedList {
+  display: flex;
+  gap: 30px;
+  font-size: 24px;
+  font-weight: bold;
+  list-style: none;
+  justify-content: flex-end;
+  margin-right: 30px;
+}
