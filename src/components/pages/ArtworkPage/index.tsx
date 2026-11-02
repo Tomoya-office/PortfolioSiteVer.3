@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import styles from "./index.module.css";
+import clsx from "clsx";
 import { Noto_Sans_JP, Dangrek, Galada } from "next/font/google";
 import NavMenu, { type NavMenuData } from "../../organisms/NavMenu";
+import ScrollDown from "../../atoms/ScrollDown";
 
 const NavMenuData: NavMenuData[] = [
   { label: "Top", href: "#top" },
@@ -33,6 +35,7 @@ export default function ArtworkPage() {
     <>
       <header className={styles.Header}>
         <NavMenu menus={NavMenuData} />
+        <h1 className={clsx(styles.Meaning, galada.className)}>Original<br/>Web Site</h1>
         <Image
           src="/ArtWorksPhotos/ECsiteTop.svg"
           alt="ECサイトのトップページ"
@@ -49,6 +52,7 @@ export default function ArtworkPage() {
             height={250}
           />
         </div>
+        <ScrollDown/>
       </header>
     </>
   );
