@@ -27,7 +27,7 @@ import PortfolioWebSite from "@/src/data/PortfolioWebSite";
 import ClientWorkListData from "@/src/data/ClientWorkListData";
 import ClientWorks, { type ClientWork } from "@/src/data/ClientWorks";
 
-import Modal from "../../pages/Modal";
+import Modal from "../Modal";
 
 const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],

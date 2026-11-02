@@ -1,5 +1,3 @@
-import type { PortfolioWebSite } from "@/src/data/PortfolioWebSite";
-import type { ClientWorkListItem } from "@/src/data/ClientWorkListData";
 
 import PortfolioItem from "../../atoms/PortfolioItem";
 import styles from "./index.module.css";

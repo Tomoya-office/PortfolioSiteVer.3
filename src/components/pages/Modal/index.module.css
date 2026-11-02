@@ -42,3 +42,7 @@
   gap: 10px;
   list-style: none;
 }
+
+.EachItem:first-child{
+  margin-bottom: 40px;
+}
