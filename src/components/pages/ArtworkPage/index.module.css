@@ -1,10 +1,14 @@
+.ArtWorkBody {
+  background-color: #EAF4F4;
+}
+
 .Header {
   position: relative;
-  height: 100vh;
+  /* height: 100vh; */
   width: 100vw;
   max-width: 1440px;
   margin: 0 auto;
-  background-color: #f3f3f3;
+  background-color: #FFF;
 }
 
 .Meaning {
@@ -42,4 +46,46 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+/* Information */
+.InformationSection {
+  width: fit-content;
+  display: flex;
+  margin: 100px auto 100px;
+  gap: 60px;
+  text-align: left;
+  flex-direction: column;
+}
+
+.InformationContent {
+  max-width: fit-content;
+  display: flex;
+  gap: 30px;
+  align-items: baseline;
+}
+
+.Headline {
+  width: 150px;
+  font-size: 32px;
+}
+
+.Description {
+  font-size: 24px;
+}
+
+/* アイコン */
+.IconPosition {
+  margin: 0 auto;
+  padding: 35px 50px 35px;
+  /* max-width: 1440px; */
+  display: flex;
+  gap: 85px;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.IconList {
+  list-style: none;
 }
