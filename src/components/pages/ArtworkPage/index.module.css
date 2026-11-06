@@ -1,14 +1,22 @@
-.ArtWorkBody {
+.ArtWorkBodyColor {
   background-color: #EAF4F4;
+}
+
+.ArtWorkBody {
+  background-color: #FFF;
+  overflow-x: clip;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .Header {
   position: relative;
   /* height: 100vh; */
+  max-height: 920px;
   width: 100vw;
   max-width: 1440px;
   margin: 0 auto;
-  background-color: #FFF;
+  /* background-color: #FFF; */
 }
 
 .Meaning {
@@ -25,9 +33,14 @@
 }
 
 .HeaderPhoto {
-  margin: 130px auto 0;
-  object-fit: cover;
+  object-position: center top;
+  object-fit: contain;
   border-radius: 30px;
+  max-width: 980px;
+  max-height: 680px;
+  height: 100%;
+  width: 100%;
+  margin: 100px auto 0;
 }
 
 .CheckTheArtworkPosition {
@@ -68,24 +81,13 @@
 
 .Headline {
   width: 150px;
-  font-size: 32px;
-}
-
-.Description {
   font-size: 24px;
 }
 
-/* アイコン */
-.IconPosition {
-  margin: 0 auto;
-  padding: 35px 50px 35px;
-  /* max-width: 1440px; */
-  display: flex;
-  gap: 85px;
-  justify-content: center;
-  background-color: #fff;
+.Description {
+  font-size: 16px;
 }
 
-.IconList {
-  list-style: none;
+.PhotosSection {
+  margin: 100px auto;
 }
