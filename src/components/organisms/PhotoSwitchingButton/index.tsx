@@ -4,22 +4,21 @@ import { useState } from "react";
 import Image from "next/image";
 import styles from "./index.module.css";
 import type { ArtworkCategory } from "@/src/data/ArtworkData";
+import Footer from "../Footer";
 
 type Props = {
   categories: ArtworkCategory[];
 };
 
-export default function PhotoSwitchingButton({
-  categories,
-}: Props) {
+export default function PhotoSwitchingButton({ categories }: Props) {
   // 最初に選択されるアイコン
   const [selectedCategoryId, setSelectedCategoryId] = useState(
-    categories[0]?.id ?? ""
+    categories[0]?.id ?? "",
   );
 
   // 選択中のアイコンに対応するデータ
   const selectedCategory = categories.find(
-    (category) => category.id === selectedCategoryId
+    (category) => category.id === selectedCategoryId,
   );
 
   return (
@@ -64,6 +63,7 @@ export default function PhotoSwitchingButton({
           />
         ))}
       </section>
+      <Footer />
     </>
   );
 }
