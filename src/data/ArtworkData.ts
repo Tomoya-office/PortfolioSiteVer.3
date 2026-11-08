@@ -437,7 +437,7 @@ const ArtworkData: Artwork[] = [
         alt: "Mobileアイコン",
         photos: [
           {
-            src: "/ArtWorksPhotos/FullPage/MyNavi/MynaviMB.jpg",
+            src: "/ArtWorksPhotos/FullPage/OldPortfolio/PortfolioOldMB.png",
             alt: "マイナビサイトのMobile画面",
             width: 1440,
             height: 2500,

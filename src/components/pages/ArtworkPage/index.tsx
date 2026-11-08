@@ -16,7 +16,6 @@ const NavMenuData: NavMenuData[] = [
   { label: "Home", href: "/#top" },
   { label: "Information", href: "#Information" },
   { label: "Photos", href: "#Photos" },
-  { label: "Contact", href: "#Contact" },
 ];
 
 type Props = {
@@ -104,7 +103,7 @@ export default function ArtworkPage({ id }: Props) {
             </div>
           </div>
         </section>
-
+        <div id="Photos"></div>
         <PhotoSwitchingButton categories={artwork.categories} />
       </div>
     </div>

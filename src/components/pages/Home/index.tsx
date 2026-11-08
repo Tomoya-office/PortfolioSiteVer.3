@@ -41,11 +41,6 @@ const NavMenuData: NavMenuData[] = [
   { label: "Illustration", href: "#Illustration" },
 ];
 
-const notoSansJP = Noto_Sans_JP({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-});
-
 const dangrek = Dangrek({
   subsets: ["latin"],
   weight: ["400"],

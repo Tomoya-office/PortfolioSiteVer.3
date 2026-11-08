@@ -34,7 +34,7 @@
 
 .HeaderPhoto {
   object-position: center top;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 30px;
   max-width: 980px;
   max-height: 680px;
