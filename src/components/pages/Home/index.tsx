@@ -28,7 +28,8 @@ import ClientWorkListData from "@/src/data/ClientWorkListData";
 import ClientWorks, { type ClientWork } from "@/src/data/ClientWorks";
 
 import Modal from "../Modal";
-import NavMenu , { type NavMenuData } from "../../organisms/NavMenu";
+import NavMenu, { type NavMenuData } from "../../organisms/NavMenu";
+import PlayButton from "../../atoms/PlayButton";
 
 const NavMenuData: NavMenuData[] = [
   { label: "Top", href: "#top" },
@@ -53,6 +54,10 @@ const dangrek = Dangrek({
 export default function Home() {
   const router = useRouter();
   const [selectedWork, setSelectedWork] = useState<ClientWork | null>(null);
+
+  // スキルの表示状態
+  const [showAllSkills, setShowAllSkills] = useState(false);
+
   return (
     <div className={styles.page}>
       <header className={styles.Header}>
@@ -87,10 +92,29 @@ export default function Home() {
       <main className={styles.main}>
         <section id="Skills" className={styles.SkilsSection}>
           <HeadLine main="全てのスキル" sub="All Skills" />
-          <div className={styles.SkillsExplanation}>
-            {skills.map((skill) => (
-              <SkillList key={skill.id} skill={skill} />
-            ))}
+          <div className={styles.SkillsContainer}>
+            <ul className={styles.SkillsExplanation}>
+              {skills.slice(0, 8).map((skill) => (
+                <SkillList key={skill.id} skill={skill} />
+              ))}
+            </ul>
+            <div
+              className={clsx(
+                styles.ExtraSkills,
+                showAllSkills && styles.ExtraSkillsOpen,
+              )}
+              aria-hidden={!showAllSkills}
+            >
+              <ul className={styles.ExtraSkillsList}>
+                {skills.slice(8).map((skill) => (
+                  <SkillList key={skill.id} skill={skill} />
+                ))}
+              </ul>
+            </div>
+            <PlayButton
+              isOpen={showAllSkills}
+              onClick={() => setShowAllSkills((prev) => !prev)}
+            />
           </div>
         </section>
 

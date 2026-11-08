@@ -17,7 +17,7 @@ type SkillListProps = {
 
 export default function SkillList({ skill }: SkillListProps) {
   return (
-    <div className={styles.SkillPosition}>
+    <li className={styles.SkillPosition}>
       <SkillIcon
       src={skill.image}
       alt={skill.alt}
@@ -26,6 +26,6 @@ export default function SkillList({ skill }: SkillListProps) {
         <SkillName name={skill.name} />
         <SkillDescription description={skill.description}/>
       </div>
-    </div>
+    </li>
   );
 }
