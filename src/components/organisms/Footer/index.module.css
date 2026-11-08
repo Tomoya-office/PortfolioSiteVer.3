@@ -1,0 +1,18 @@
+
+/* Footer */
+.FooterPosition {
+  position: relative;
+}
+
+.FooterName {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  font-size: 32px;
+  color: #FFF;
+}
+
+.FooterPhoto {
+  width: 100%;
+  object-fit: cover;
+}

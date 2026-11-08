@@ -30,6 +30,7 @@ import ClientWorks, { type ClientWork } from "@/src/data/ClientWorks";
 import Modal from "../Modal";
 import NavMenu, { type NavMenuData } from "../../organisms/NavMenu";
 import PlayButton from "../../atoms/PlayButton";
+import Footer from "../../organisms/Footer";
 
 const NavMenuData: NavMenuData[] = [
   { label: "Top", href: "#top" },
@@ -38,7 +39,6 @@ const NavMenuData: NavMenuData[] = [
   { label: "My Works", href: "#MyWorks" },
   { label: "Client", href: "#Client" },
   { label: "Illustration", href: "#Illustration" },
-  { label: "Contact", href: "#Contact" },
 ];
 
 const notoSansJP = Noto_Sans_JP({
@@ -150,8 +150,7 @@ export default function Home() {
             <Modal work={selectedWork} onClose={() => setSelectedWork(null)} />
           )}
         </section>
-
-        <footer></footer>
+        <Footer/>
       </main>
     </div>
   );
