@@ -158,6 +158,32 @@ a.secondary {
     #FFF;
 }
 
+
+.PortfolioScrollPostion {
+  position: absolute;
+  top: 50px;
+  left: 80px;
+}
+
+.PortfolioScroll {
+  height: fit-content;
+  width: fit-content;
+  animation: rotateCircle 20s linear infinite;
+}
+
+/* CheckTheArtworkが常に回転するようにするアニメーション */
+@keyframes rotateCircle {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
 .MyFace {
   object-fit: cover;
   width: fit-content;
@@ -183,6 +209,7 @@ a.secondary {
 
 /* 動く写真 */
 .AllScrollPhotos {
+  position: relative;
   justify-content: space-between;
   display: flex;
   max-width: 1440px;
@@ -207,11 +234,11 @@ a.secondary {
 }
 
 .SecondPhotos {
-  transform: rotate(45deg);
-  position: absolute;
-  top: 150px;
-  right: 185px;
   z-index: 1;
+  position: absolute;
+  top: -80px;
+  right: 35px;
+  transform: rotate(45deg);
 }
 
 /* 自分のスキルについて */

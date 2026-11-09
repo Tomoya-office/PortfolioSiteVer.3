@@ -121,7 +121,7 @@
   transform: translate(-50%, -5%);
   width: calc(100% - 30px);
   height: 95%;
-  border: 2px solid #FFE082;
+  border: 12px double #ffe082;
   box-sizing: border-box;
 }
 
@@ -137,6 +137,7 @@
 }
 
 .BookPage {
+  text-align: left;
   height: 100%;
   width: 100%;
   padding: 40px;
@@ -144,4 +145,31 @@
   background: #FFFFFF;
   border: solid #333 1px;
   border-radius: 10px;
+}
+
+.Titele{
+  margin-bottom: 10px;
+}
+
+.ProfilePhoto{
+  object-position: top left;
+  object-fit: cover;
+  height: 100%;
+  border: double 7px #333;
+}
+
+.AboutProfilePosition{
+  display: flex;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+.MessageTextPosition{
+  margin-top: 30px;
+}
+
+.CareerPhoto{
+  object-position: -220px;
+  height: 100%;
+  object-fit: cover;
 }

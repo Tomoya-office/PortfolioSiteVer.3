@@ -69,6 +69,16 @@ export default function Home() {
               <PortfolioPhotosList key={photo.id} photo={photo} />
             ))}
           </div>
+
+          <span className={styles.PortfolioScrollPostion}>
+            <Image
+              src="/top/portfolio.svg"
+              alt="portfolioスクロール画像"
+              className={styles.PortfolioScroll}
+              width={2400}
+              height={572}
+            />
+          </span>
         </div>
 
         <Image
@@ -145,7 +155,7 @@ export default function Home() {
             <Modal work={selectedWork} onClose={() => setSelectedWork(null)} />
           )}
         </section>
-        <Footer/>
+        <Footer />
       </main>
     </div>
   );
