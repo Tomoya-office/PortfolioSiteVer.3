@@ -64,11 +64,11 @@ export default function ArtworkPage({ id }: Props) {
         <section id="Information" className={styles.InformationSection}>
           <div className={styles.InformationContent}>
             <h2 className={styles.Headline}>Consept</h2>
-            <p className={styles.Description}>
+            <div className={styles.Description}>
               {artwork.concept.map((item, index) => (
                 <p key={index}>{item}</p>
               ))}
-            </p>
+            </div>
           </div>
 
           <div className={styles.InformationContent}>
