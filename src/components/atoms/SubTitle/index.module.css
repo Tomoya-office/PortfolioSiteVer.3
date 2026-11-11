@@ -1,0 +1,13 @@
+.HeadlineEN {
+  /* position: absolute;
+  top: -30px;
+  left: -30px; */
+  height: fit-content;
+  width: fit-content;
+  font-size: 32px;
+  letter-spacing: 5%;
+  transform: rotate(-15deg);
+  color: #FFF;
+  -webkit-text-stroke: 1px #333;
+  text-shadow: 3px 3px #F9CF4F77;
+}

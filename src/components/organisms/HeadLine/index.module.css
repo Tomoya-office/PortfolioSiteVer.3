@@ -1,0 +1,6 @@
+/* h2タイトル */
+.HeadlinePosition {
+  width: fit-content;
+  position: relative;
+  margin: 0 0 50px 100px;
+}

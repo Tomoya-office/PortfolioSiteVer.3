@@ -1,0 +1,22 @@
+.LineSpacing {
+  line-height: 30px;
+}
+
+.EachItem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+
+/* 見出し */
+.Headline {
+  font-size: 24px;
+  text-align: left;
+}
+
+.Detail {
+  list-style: none;
+  font-size: 18px;
+  text-align: left;
+}

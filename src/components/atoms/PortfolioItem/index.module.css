@@ -1,0 +1,24 @@
+.PhotoButton {
+  /* ボタンの標準スタイルをリセット */
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+
+  /* 写真の表示を崩さない */
+  display: block;
+  cursor: pointer;
+}
+
+.PhotoButton:hover {
+  transform: scale(1.05);
+  filter: brightness(1.0);
+}
+
+
+.WebPortfolioPhoto {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}

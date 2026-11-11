@@ -1,0 +1,175 @@
+
+/* 本のデザイン */
+.BookPosition {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transition: transform 1s ease-in-out;
+}
+
+.BookPosition :global(.stf__parent) {
+  position: relative;
+  z-index: 1;
+  margin-inline: auto;
+}
+
+/* 表紙が閉じているとき：左側 */
+.BookClosedFront {
+  transform: translateX(-150px);
+  transition: transform 1s ease-in-out;
+}
+
+/* 裏表紙が閉じているとき：右側 */
+.BookClosedBack {
+  transform: translateX(150px);
+  transition: transform 1s ease-in-out;
+}
+
+.BookCover,
+.BookCoverEND {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #5C1C1D;
+  border: solid #333 1px;
+  border-radius: 10px;
+}
+
+.BookThickness {
+  position: absolute;
+  width: 400px;
+  height: 600px;
+  z-index: 0;
+}
+
+.BookThickness span {
+  position: absolute;
+  width: 400px;
+  height: 600px;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.BookThickness span:nth-child(1) {
+  transform: translateX(12px);
+}
+
+.BookThickness span:nth-child(2) {
+  transform: translateX(9px);
+}
+
+.BookThickness span:nth-child(3) {
+  transform: translateX(6px);
+}
+
+.BookThickness span:nth-child(4) {
+  transform: translateX(3px);
+}
+
+.BookThickness span:nth-child(5) {
+  transform: translateX(0);
+}
+
+.BookCover::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: -15px;
+  width: 15px;
+  height: calc(100% - 6px);
+  background: repeating-linear-gradient(to right,
+      #ffffff 0px,
+      #ffffff 2px,
+      #d0d0d0 3px,
+      #ffffff 4px);
+  border-right: 1px solid #aaa;
+}
+
+/* 裏表紙：紙の厚みを左側に表示 */
+.BookCoverEND::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -15px;
+  width: 15px;
+  height: calc(100% - 6px);
+  background: repeating-linear-gradient(to left,
+      #ffffff 0px,
+      #ffffff 2px,
+      #d0d0d0 3px,
+      #ffffff 4px);
+  border-left: 1px solid #aaa;
+}
+
+.BookTitle {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  color: #fff;
+  font-size: 32px;
+  transform: translate(50%, -50%);
+}
+
+/* 本の枠線(黄色) */
+.BookSolid {
+  position: absolute;
+  transform: translate(-50%, -5%);
+  width: calc(100% - 30px);
+  height: 95%;
+  border: 12px double #ffe082;
+  box-sizing: border-box;
+}
+
+.BookSolidEND {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  width: calc(100% - 30px);
+  height: calc(100% - 40px);
+  border: 2px solid #FFE082;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.BookPage {
+  text-align: left;
+  height: 100%;
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: solid #333 1px;
+  border-radius: 10px;
+}
+
+.Titele{
+  margin-bottom: 10px;
+}
+
+.ProfilePhoto{
+  object-position: top left;
+  object-fit: cover;
+  height: 100%;
+  border: double 7px #333;
+}
+
+.AboutProfilePosition{
+  display: flex;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+.MessageTextPosition{
+  margin-top: 30px;
+}
+
+.CareerPhoto{
+  object-position: -220px;
+  height: 100%;
+  object-fit: cover;
+}

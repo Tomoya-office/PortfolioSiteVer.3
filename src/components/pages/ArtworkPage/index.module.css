@@ -1,0 +1,93 @@
+.ArtWorkBodyColor {
+  background-color: #EAF4F4;
+}
+
+.ArtWorkBody {
+  background-color: #FFF;
+  overflow-x: clip;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.Header {
+  position: relative;
+  /* height: 100vh; */
+  max-height: 920px;
+  width: 100vw;
+  max-width: 1440px;
+  margin: 0 auto;
+  /* background-color: #FFF; */
+}
+
+.Meaning {
+  position: absolute;
+  top: 80px;
+  left: 30px;
+  width: fit-content;
+  font-size: 48px;
+  line-height: 60px;
+  transform: rotate(-15deg);
+  -webkit-text-stroke: 5px #E50000;
+  paint-order: stroke fill;
+  color: #fff;
+}
+
+.HeaderPhoto {
+  object-position: center top;
+  object-fit: cover;
+  border-radius: 30px;
+  max-width: 980px;
+  max-height: 680px;
+  height: 100%;
+  width: 100%;
+  margin: 100px auto 0;
+}
+
+.CheckTheArtworkPosition {
+  position: absolute;
+  top: 620px;
+  right: 0;
+  animation: rotateCircle 20s linear infinite;
+}
+
+/* CheckTheArtworkが常に回転するようにするアニメーション */
+@keyframes rotateCircle {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Information */
+.InformationSection {
+  width: fit-content;
+  display: flex;
+  margin: 100px auto 100px;
+  gap: 60px;
+  text-align: left;
+  flex-direction: column;
+}
+
+.InformationContent {
+  max-width: fit-content;
+  display: flex;
+  gap: 30px;
+  align-items: baseline;
+}
+
+.Headline {
+  width: 150px;
+  font-size: 24px;
+}
+
+.Description {
+  font-size: 16px;
+}
+
+.PhotosSection {
+  margin: 100px auto;
+}

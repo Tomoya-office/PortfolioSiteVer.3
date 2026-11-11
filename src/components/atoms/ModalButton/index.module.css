@@ -1,0 +1,9 @@
+.CloseButton {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  border: none;
+  background: transparent;
+  font-size: 54px;
+  cursor: pointer;
+}
